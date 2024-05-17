@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/dice.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/dice.ico" type="image/x-icon">
     <title>Contacto</title>
 </head>
 <body>
@@ -25,7 +25,72 @@
 
     <!-- Contenido principal -->
     <main>
-        <h2> Tabla </h2>
+        <section>
+            <h1> Contacto </h1>
+
+            <form action="">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                
+                <br>
+
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" name="telefono" id="telefono" min="0">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <input type="text" name="mensaje" id="mensaje" maxlength="300">
+                </div>
+
+                <br>
+
+                <div>
+                    <h2>Seleccione</h2>
+                    
+                    <div>
+                        <input type="radio" name="opcion" id="respuesta01" value="Respuesta 1">
+                        <label for="respuesta01">Respuesta 1</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="opcion" id="respuesta02" value="Respuesta 2">
+                        <label for="respuesta02">Respuesta 2</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="opcion" id="respuesta03" value="Respuesta 3">
+                        <label for="respuesta03">Respuesta 3</label>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </div>
+
+            </form>
+        </section>
     </main>
 
     <!-- Pie de página  -->
