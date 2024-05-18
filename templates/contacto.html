@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../static/img/dice.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/index.css">
-    <title>Contacto</title>
+    <title>Formulario de Contacto</title>
 </head>
 <body>
 
@@ -14,6 +14,7 @@
     <!-- Ctrl+k+c para comentar -->
     <!-- Ctrl+k+u para descomentar -->
     <!-- Encabezado -->
+    <h1>Formulario de Contacto</h1>
     <header>
         <div class="en-linea">
             <img id="logo" src="../static/img/d20_dice_big.png" alt="">
@@ -32,62 +33,64 @@
         <section>
             <h1> Contacto </h1>
 
-            <form action="">
+            <form id="contactForm" action="">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre">
+                    <input type="text" name="nombre" id="nombre" required>
                 </div>
 
                 <br>
-
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" id="apellido">
+                    <input type="text" name="apellido" id="apellido" required>
                 </div>
 
                 <br>
 
                 <div>
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
                 
                 <br>
 
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input type="number" name="telefono" id="telefono" min="0">
+                    <input type="tel" name="telefono" id="telefono" min="0" required>
                 </div>
 
                 <br>
-
-                <div>
-                    <label for="mensaje">Mensaje (opcional):</label>
-                    <input type="text" name="mensaje" id="mensaje" maxlength="300">
-                </div>
-
                 <br>
 
-                <div>
+                <div class="radio-group">
                     <h2>Seleccione</h2>
                     
-                    <div>
-                        <input type="radio" name="opcion" id="respuesta01" value="Respuesta 1">
-                        <label for="respuesta01">Respuesta 1</label>
-                    </div>
+                    <label for="genero">Género:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Masculino</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Femenino</label>
+            <input type="radio" id="otro" name="gender" value="otro">
+            <label for="otro">Otro</label>
 
-                    <div>
-                        <input type="radio" name="opcion" id="respuesta02" value="Respuesta 2">
-                        <label for="respuesta02">Respuesta 2</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="opcion" id="respuesta03" value="Respuesta 3">
-                        <label for="respuesta03">Respuesta 3</label>
-                    </div>
                     
                 </div>
-
+                <div>
+                    <label for="preference">Preferencia de Contacto:</label>
+                    <select id="preference" name="preference" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="email">Correo Electrónico</option>
+                        <option value="phone">Teléfono</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <textarea name="mensaje" id="mensaje" maxlength="300"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los términos y condiciones</label>
+                </div>
                 <div>
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Borrar">
