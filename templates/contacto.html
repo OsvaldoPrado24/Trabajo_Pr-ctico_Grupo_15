@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../static/img/dice.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/index.css">
-    <title>Formulario de Contacto</title>
+    <title>Formulario de Contacto </title>
 </head>
+
 <body>
 
     <!-- Va el contenido de la página -->
@@ -18,25 +20,28 @@
     <header>
         <div class="en-linea">
             <img id="logo" src="../static/img/d20_dice_big.png" alt="">
-        </div>  
+        </div>
         <nav class="en-linea">
             <a class="hiperv" href="dados.html">Dados</a>
             <a class="hiperv" href="miniaturas.html">Miniaturas</a>
             <a class="hiperv" href="como_comprar.html">Como comprar</a>
             <a class="hiperv" href="../index.html">Inicio</a>
-            <a class="hiperv" href="contacto.html">contacto</a>
+            <a class="hiperv" href="contacto.html">Contacto</a>
         </nav>
-    </header>  
+    </header>
 
     <!-- Contenido principal -->
     <main>
         <section>
             <h1> Contacto </h1>
+            <!--<form action="https://formspree.io/f/xnqeonwe"  method="POST">-->
 
-            <form id="contactForm" action="">
+                <form id="formulario" onsubmit="return validarDatos()">
+            <!-- <form id="contactForm"> -->
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z\s]+" title="El nombre solo debe contener letras y espacios." required>
+                    
                 </div>
 
                 <br>
@@ -51,12 +56,13 @@
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                
+
                 <br>
 
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" name="telefono" id="telefono" min="0" required>
+                    <input type="tel"  name="telefono" id="telefono"  required>
+                    
                 </div>
 
                 <br>
@@ -64,33 +70,41 @@
 
                 <div class="radio-group">
                     <h2>Seleccione</h2>
-                    
-                    <label for="genero">Género:</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Masculino</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Femenino</label>
-            <input type="radio" id="otro" name="gender" value="otro">
-            <label for="otro">Otro</label>
 
-                    
+                    <label for="genero">Preferencia de Contacto:</label>
+                    <input type="radio" id="tel" name="preferencia" value="tel" required>
+                    <label for="tel">Telefono</label>
+                    <input type="radio" id="mail" name="preferencia" value="mail">
+                    <label for="mail">E-mail</label>
+                    <input type="radio" id="ninguno" name="preferencia" value="ninguno">
+                    <label for="ninguno">Ninguno</label>
+
+
+
                 </div>
+                <br>
                 <div>
-                    <label for="preference">Preferencia de Contacto:</label>
-                    <select id="preference" name="preference" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="email">Correo Electrónico</option>
-                        <option value="phone">Teléfono</option>
+                    <label for="genero">Seleccione Genero</label>
+                    <select name="genero" id="genero">
+
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="otro">Otro</option>
                     </select>
                 </div>
+                <br>
+
                 <div>
                     <label for="mensaje">Mensaje (opcional):</label>
                     <textarea name="mensaje" id="mensaje" maxlength="300"></textarea>
                 </div>
+                <br>
                 <div>
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">Acepto los términos y condiciones</label>
                 </div>
+                <br>
+                <div id="campos"></div>
                 <div>
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Borrar">
@@ -99,10 +113,12 @@
             </form>
         </section>
     </main>
-
+    
     <!-- Pie de página  -->
     <footer>
         <h3> Espacio para el footer </h3>
     </footer>
+    <script src="../static/js/index.js"></script>  
 </body>
+
 </html>
