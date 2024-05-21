@@ -11,12 +11,12 @@ function validarDatos() {
     const trimmedName = nameInput.value.trim();
     if (!namePattern.test(trimmedName) || trimmedName.length <= 2) {
         formValid = false;
-        nameInput.style.border = '1px solid red';
+        error.style.color = "red"
         error.textContent = "Por favor ingrese un nombre válido que contenga solo letras  y más de 3 caracteres."
 
        return false
     } else {
-        nameInput.style.border = '1px solid #ccc';
+        error.style.color = '1px solid #ccc';
     }
 // Verificar si el apellido contiene solo tiene caracteres alfabéticos y mas de 3 letras
     const apellidoInput = document.getElementById('apellido');
@@ -24,7 +24,7 @@ function validarDatos() {
     const trimapellido = apellidoInput.value.trim();
     if (!apellidoPattern.test(trimapellido) || trimapellido.length <= 2) {
         formValid = false;
-        nameInput.style.border = '1px solid red';
+        error.style.color = "red"
         error.textContent = "Por favor ingrese un apellido válido que contenga solo letras  y más de 3 caracteres."
 
        return false
