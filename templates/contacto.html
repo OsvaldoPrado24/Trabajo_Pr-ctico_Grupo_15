@@ -22,10 +22,10 @@
             <img id="logo" src="../static/img/d20_dice_big.png" alt="">
         </div>
         <nav class="en-linea">
+            <a class="hiperv" href="../index.html">Inicio</a>
             <a class="hiperv" href="dados.html">Dados</a>
             <a class="hiperv" href="miniaturas.html">Miniaturas</a>
             <a class="hiperv" href="como_comprar.html">Como comprar</a>
-            <a class="hiperv" href="../index.html">Inicio</a>
             <a class="hiperv" href="contacto.html">Contacto</a>
         </nav>
     </header>
@@ -36,18 +36,19 @@
             <h1> Contacto </h1>
             <!--<form action="https://formspree.io/f/xnqeonwe"  method="POST">-->
 
-                <form id="formulario" onsubmit="return validarDatos()">
-            <!-- <form id="contactForm"> -->
+            <form id="formulario" onsubmit="return validarDatos()">
+                <!-- <form id="contactForm"> -->
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z\s]+" title="El nombre solo debe contener letras y espacios." required>
-                    
+                    <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z\s]+"
+                        title="El nombre solo debe contener letras y espacios.">
+
                 </div>
 
                 <br>
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" id="apellido" required>
+                    <input type="text" name="apellido" id="apellido">
                 </div>
 
                 <br>
@@ -61,27 +62,25 @@
 
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel"  name="telefono" id="telefono"  required>
-                    
+                    <input type="tel" name="telefono" id="telefono" required>
+
                 </div>
 
                 <br>
                 <br>
 
                 <div class="radio-group">
-                    <h2>Seleccione</h2>
+                    <h2 class="inpulabel1">Seleccione</h2>
 
-                    <label for="genero">Preferencia de Contacto:</label>
-                    <input type="radio" id="tel" name="preferencia" value="tel" required>
-                    <label for="tel">Telefono</label>
-                    <input type="radio" id="mail" name="preferencia" value="mail">
-                    <label for="mail">E-mail</label>
-                    <input type="radio" id="ninguno" name="preferencia" value="ninguno">
-                    <label for="ninguno">Ninguno</label>
-
-
-
+                    <div class="inpulabel2"><label>preferencia de Contacto:</label></div>
+                    <div class="inpulabel"> <label for="tel">Telefono</label></div>
+                    <div class="inputradio"> <input type="radio" id="tel" name="preferencia" value="tel" required></div>
+                    <div class="inpulabel"> <label for="mail">E-mail</label></div>
+                    <div class="inputradio"> <input type="radio" id="mail" name="preferencia" value="mail"></div>
+                    <div class="inpulabel"> <label for="ninguno">Ninguno</label></div>
+                    <div class="inputradio"> <input type="radio" id="ninguno" name="preferencia" value="ninguno"></div>
                 </div>
+
                 <br>
                 <div>
                     <label for="genero">Seleccione Genero</label>
@@ -99,9 +98,10 @@
                     <textarea name="mensaje" id="mensaje" maxlength="300"></textarea>
                 </div>
                 <br>
-                <div>
-                    <input type="checkbox" id="terms" name="terms" required>
+                <div id="tym">
                     <label for="terms">Acepto los términos y condiciones</label>
+                    <input type="checkbox" id="terms" name="terms" required>
+
                 </div>
                 <br>
                 <div id="campos"></div>
@@ -113,12 +113,12 @@
             </form>
         </section>
     </main>
-    
+
     <!-- Pie de página  -->
     <footer>
-        <h3> Espacio para el footer </h3>
+        <p>&copy; 2024 Juegos de Mesa y Miniaturas. Todos los derechos reservados.</p>
     </footer>
-    <script src="../static/js/index.js"></script>  
+    <script src="../static/js/index.js"></script>
 </body>
 
 </html>
