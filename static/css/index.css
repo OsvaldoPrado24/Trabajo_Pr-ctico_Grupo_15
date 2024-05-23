@@ -64,7 +64,7 @@ las imágenes no se salgan del contenedor. */
 
 .card {
     background-color: rgba(224, 243, 237, 0.1);
-    max-width: 400px;
+    max-width: 960px;
     width: 100%;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
@@ -76,10 +76,9 @@ las imágenes no se salgan del contenedor. */
 }
 
 .imagen-responsive {
-    max-width: 400px;
     width: 100%;
-    display: block;
-    height: 250px;
+    display: inline-flex;
+    height: auto;
 }
 
 /* Incorporación de fuente externa */
@@ -210,6 +209,7 @@ footer {
     background: rgba(62, 92, 92, 0.3) !important;
     margin-top: 10vh;
     margin-bottom: 10vh;
+    margin: 40px;
 
 }
 
